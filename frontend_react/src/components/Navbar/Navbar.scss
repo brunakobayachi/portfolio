@@ -83,7 +83,6 @@
     height: 35px;
     border-radius: 50%;
 
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,6 +93,11 @@
         width: 70%;
         height: 70%;
         color: var(--white-color);
+    }
+
+    @media screen and (min-width: 900px){
+    
+        display: none;
     }
 }
 
@@ -115,7 +119,7 @@
     flex-direction: column;
 
     background: url("../../assets/bgWhite.png");
-    background-color: var(--white-color);
+    background-color: var(--navbar-menu);
     background-size: cover;
     background-repeat: repeat;
 
@@ -134,10 +138,37 @@
         padding: 0;
         height: 100%;
         width: 100%;
-        
-        display:flex;
+
+        display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
+
+        li {
+            margin: 1rem;
+
+            a {
+                color: var(--gray-color);
+                text-decoration: none;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 500;
+
+                transition: all 0.4 ease-in-out;
+
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+        @media screen and (min-width: 900px){
+            display: none;
+        }
+    }
+    @media screen and (min-width: 900px){
+    
+        display: none;
     }
 }
+
+
