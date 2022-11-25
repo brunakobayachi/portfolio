@@ -4,6 +4,7 @@
   --font-base: "DM Sans", sans-serif;
 
   --navbar-color: #d9d9d9;
+  --work-pills-color: #9855CC;
   --primary-color: #edf2f8;
   --secondary-color: #646464;
   --span-color: #6D1EAB;
@@ -12,6 +13,7 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  
 }
 
 * {
