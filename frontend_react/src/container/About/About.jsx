@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; 
-import { AppWrap } from "../../wrapper";
+import { motion } from "framer-motion";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
 const About = () => {
@@ -17,9 +17,9 @@ const About = () => {
     return (
         <>
             <h2 className="head-text">
-                I know that <span>Good Development</span>
+                Um bom <span>Desenvolvimento</span>
                 <br />
-                means <span>Good Business</span>
+                significa um bom <span>Negócio</span>
             </h2>
 
             <div className="app__profiles">
@@ -44,4 +44,8 @@ const About = () => {
     );
 };
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+    MotionWrap(About, "app__about"),
+    "about",
+    "app__whitebg"
+);
