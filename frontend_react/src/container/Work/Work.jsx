@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
+import { useTranslation } from "react-i18next";
 
 const Work = () => {
-    const [activeFilter, setActiveFilter] = useState("All");
+    const { t } = useTranslation();
+    const [activeFilter, setActiveFilter] = useState(t("all"));
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
@@ -27,7 +29,7 @@ const Work = () => {
         setTimeout(() => {
             setAnimateCard([{y: 0, opacity: 1}])
 
-            if(item === "Todos") {
+            if(item === t("all")) {
                 setFilterWork(works);
             } else {
                 setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -39,11 +41,11 @@ const Work = () => {
     return (
         <>
             <h2 className="head-text">
-                Meus <span>Projetos</span> 
+                {t("my")}<span> {t("portfolio")}</span> 
             </h2>
 
             <div className="app__work-filter">
-                {["Python", "Web App", "Backend", "React JS", "Todos"].map(
+                {["Python", "Web App", "Backend", "React JS", t("all")].map(
                     (item, index) => (
                         <div
                             key={index}
@@ -123,6 +125,6 @@ const Work = () => {
 
 export default AppWrap(
     MotionWrap(Work, "app__works"),
-    "work",
+    'works',
     "app__primarybg"
 );

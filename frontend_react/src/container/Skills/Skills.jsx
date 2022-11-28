@@ -4,8 +4,10 @@ import ReactTooltip from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Skills.scss";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+    const { t } = useTranslation();
     const [experience, setExperience] = useState([]);
     const [skills, setSkills] = useState([]);
 
@@ -24,7 +26,7 @@ const Skills = () => {
     return (
         <>
             <h2 className="head-text">
-                Habilidades <span>&</span> Experiências
+                {t("skills")} <span>&</span> {t("exp")}
             </h2>
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
@@ -91,6 +93,6 @@ const Skills = () => {
 
 export default AppWrap(
     MotionWrap(Skills, "app__skills"),
-    "skills",
+    'skills',
     "app__whitebg"
 );

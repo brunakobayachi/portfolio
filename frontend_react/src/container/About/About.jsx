@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
+import { useTranslation } from "react-i18next";
+
 const About = () => {
     const [abouts, setAbouts] = useState([]);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const query = '*[_type == "abouts"]';
@@ -17,9 +20,9 @@ const About = () => {
     return (
         <>
             <h2 className="head-text">
-                Um bom <span>Desenvolvimento</span>
+                {t("know")} <span>{t("development")}</span>
                 <br />
-                significa um bom <span>Negócio</span>
+                {t("means")} <span>{t("business")}</span>
             </h2>
 
             <div className="app__profiles">
@@ -46,6 +49,6 @@ const About = () => {
 
 export default AppWrap(
     MotionWrap(About, "app__about"),
-    "about",
+    'about',
     "app__whitebg"
 );

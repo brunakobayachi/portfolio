@@ -3,6 +3,7 @@ import "./Header.scss";
 import { AppWrap } from "../../wrapper";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { useTranslation } from "react-i18next";
 
 const scaleVariants = {
     whileInView: {
@@ -16,6 +17,8 @@ const scaleVariants = {
 };
 
 const Header = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="app__header app__flex">
             <motion.div
@@ -26,12 +29,12 @@ const Header = () => {
                     <div className="badge-cmp app__flex">
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
-                            <p className="p-text">Olá, meu nome é </p>
+                            <p className="p-text">{t("hello")}</p>
                             <h1 className="head-text">Bruna</h1>
                         </div>
                     </div>
                     <div className="tag-cmp app__flex">
-                        <p className="p-text">Desenvolvedora Fullstack Junior</p>
+                        <p className="p-text">{t("role")}</p>
                         <p className="p-text">Freelancer</p>
                     </div>
                 </div>
@@ -66,4 +69,4 @@ const Header = () => {
     );
 };
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, 'home');
