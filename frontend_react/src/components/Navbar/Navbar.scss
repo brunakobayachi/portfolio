@@ -95,8 +95,7 @@
         color: var(--white-color);
     }
 
-    @media screen and (min-width: 900px){
-    
+    @media screen and (min-width: 900px) {
         display: none;
     }
 }
@@ -161,14 +160,27 @@
                 }
             }
         }
-        @media screen and (min-width: 900px){
+        @media screen and (min-width: 900px) {
             display: none;
         }
     }
-    @media screen and (min-width: 900px){
-    
+    @media screen and (min-width: 900px) {
         display: none;
     }
 }
 
+.flag {
+    max-width: 35px;
+    max-height: 35px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.flag-mobile {
+    width: 48px;
+    height: 48px;
+}
 

@@ -19,23 +19,25 @@ const Navbar = () => {
                 </div>
                 <ul className="app__navbar-links">
                     {[
-                        { name: t("home"), ref: 'home' },
-                        { name: t("about"), ref: 'about' },
-                        { name: t("works"), ref: 'works' },
-                        { name: t("skills"), ref: 'skills' },
-                        { name: t("contact"), ref: 'contact' },
-                    ].map((item) => (
-                        <li className="app__flex p-text" key={`link-${item}`}>
+                        { name: t("home"), ref: "home" },
+                        { name: t("about"), ref: "about" },
+                        { name: t("works"), ref: "works" },
+                        { name: t("skills"), ref: "skills" },
+                        { name: t("contact"), ref: "contact" },
+                    ].map(item => (
+                        <li
+                            className="app__flex p-text"
+                            key={`link-${item.ref}`}>
                             <a href={`#${item.ref}`}>{item.name}</a>
                             <div />
                         </li>
                     ))}
-                </ul>
+                </ul> 
 
-                <div className="app__navbar-language">
-                    <LanguageSwitcher />
+                <div className="flag">
+                    <LanguageSwitcher  />
                 </div>
-
+                
                 <div className="app__navbar-menu-button">
                     <HiMenuAlt4 onClick={() => setToggle(true)} />
                 </div>
@@ -49,21 +51,24 @@ const Navbar = () => {
                     <HiX onClick={() => setToggle(false)} />
                     <ul>
                         {[
-                            t("home"),
-                            t("about"),
-                            t("works"),
-                            t("skills"),
-                            t("contact"),
+                            { name: t("home"), ref: "home" },
+                            { name: t("about"), ref: "about" },
+                            { name: t("works"), ref: "works" },
+                            { name: t("skills"), ref: "skills" },
+                            { name: t("contact"), ref: "contact" },
                         ].map(item => (
-                            <li key={item}>
+                            <li key={item.ref}>
                                 <a
-                                    href={`#${item}`}
+                                    href={`#${item.ref}`}
                                     onClick={() => setToggle(false)}>
-                                    {item}
+                                    {item.name}
                                 </a>
                             </li>
                         ))}
                     </ul>
+                    <div>
+                        <LanguageSwitcher className="flag-mobile" />
+                    </div>
                 </motion.div>
             )}
         </>
