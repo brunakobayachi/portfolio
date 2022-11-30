@@ -42,7 +42,8 @@ const resources = {
             project_desc2:'Pokemon data Web Scraping with Python',
             project_desc3:"Ignite Feed it's a simple social media where you can comment, delete and aplaud to interact at the application!",
             project_desc4:'This web app is totally responsible to mobile devices and has the function to change between languages (American English and Brazilian Portuguese).',
-            project_desc5: 'Destiny Bond is an online Pokédex, built with Vue.js, and is stil under development. It utilizes a database created by web scraping Serebii.net with Python and storing the data in MongoDB. A collab with Diego Yuri.'
+            project_desc5: 'Destiny Bond is an online Pokédex, built with Vue.js, and is stil under development. It utilizes a database created by web scraping Serebii.net with Python and storing the data in MongoDB. A collab with Diego Yuri.',
+            portfolio_title: 'This portfolio!',
         },
     },
 
@@ -83,8 +84,9 @@ const resources = {
             project_desc1:'Ignite Timer é um timer onde você pode definir intervalos de 5 a 60 minutos. Você também pode acessar o histórico de timers e o status deles.',
             project_desc2:'Web Scraping de dados de Pokemon usando Python',
             project_desc3:"Ignite Feed é uma rede social simples, onde você pode fazer comentários, deletá-los e aplaudir para interagir com a aplicação!",
-            project_desc4:'Essa aplicação é totalmente responsiva e tem a função de trocar o idioma (inglês americano e portugês brasileiro.',
+            project_desc4:'Essa aplicação é totalmente responsiva e tem a função de trocar o idioma (inglês americano e portugês brasileiro).',
             project_desc5:'Destiny Bond é uma Pokédex feita em Vue.js, e está em desenvolvimento. É utilizado um banco de dados criado com um web scraping em Python no site Serebii.net e armazenado no MongoDB. Uma colaboração com Diego Yuri.',
+            portfolio_title: 'Este portfolio!'
         },
     },
 };
