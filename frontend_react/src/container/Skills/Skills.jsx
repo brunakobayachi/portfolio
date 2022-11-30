@@ -30,7 +30,7 @@ const Skills = () => {
             </h2>
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
-                    {skills?.map((skill,index) => (
+                    {skills?.map((skill, index) => (
                         <motion.div
                             whileInView={{ opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
@@ -58,14 +58,13 @@ const Skills = () => {
                             </div>
                             <motion.div className="app__skills-exp-works">
                                 {experience.works.map((work, index) => (
-                                    <>
+                                    <div key={index}>
                                         <motion.div
                                             whileInView={{ opacity: [0, 1] }}
                                             transition={{ duration: 0.5 }}
                                             className="app__skills-exp-work"
                                             data-tip
-                                            data-for={t(work.name)}
-                                            key={index}>
+                                            data-for={t(work.name)}>
                                             <h4 className="bold-text">
                                                 {t(work.name)}
                                             </h4>
@@ -80,7 +79,7 @@ const Skills = () => {
                                             className="skills-tooltip">
                                             {t(work.desc)}
                                         </ReactTooltip>
-                                    </>
+                                    </div>
                                 ))}
                             </motion.div>
                         </motion.div>
@@ -93,6 +92,6 @@ const Skills = () => {
 
 export default AppWrap(
     MotionWrap(Skills, "app__skills"),
-    'skills',
+    "skills",
     "app__whitebg"
 );

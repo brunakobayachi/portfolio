@@ -13,11 +13,12 @@ function LanguageSwitcher() {
 
     return (
         <div>
-            <div 
-                onClick={() => toggleLanguage()}
-            >
-                <img className="flag-img" src={language == "en" ? images.usa : images.brazil}/>
-            
+            <div onClick={() => toggleLanguage()}>
+                <img
+                    className="flag-img"
+                    alt={`flag-${language}`}
+                    src={language == "en" ? images.brazil : images.usa}
+                />
             </div>
         </div>
     );
