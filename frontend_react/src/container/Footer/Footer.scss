@@ -86,10 +86,13 @@
             font-family: var(--font-base);
             color: var(--secondary-color);
             outline: none;
+            
         }
 
         textarea {
-            height: 170px;
+            resize: vertical;
+            min-height: 60px;
+            max-height: 400px;
         }
 
         &:hover {
