@@ -1,6 +1,6 @@
 # portfolio
 # About
-Welcome to my portfolio! This web app is totally responsible to mobile devices and have the function to change between languages (American English and Brazilian Portuguese).
+Welcome to my [portfolio](https://bruna-portfolio.netlify.app/)! This web app is totally responsible to mobile devices and have the function to change between languages (American English and Brazilian Portuguese).
 It features Sanity for the backend setup and animation between sections with framer-motion lib.
 <p align="center"> <img src="./1.png"> </p> 
 <p align="center"> <img src="./2.png"> </p> 
