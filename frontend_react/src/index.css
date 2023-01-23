@@ -13,6 +13,7 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --moon-color: #FDE8C2;
   
 }
 
@@ -25,6 +26,7 @@
 
 body, html {
     overflow-x: hidden;
+    overflow: overlay;
 }
 
 html {

@@ -4,6 +4,22 @@
     min-height: 100vh;
 }
 
+* {
+    
+    &::-webkit-scrollbar-track {
+        display: none !important;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: var(--span-color);
+        border-radius: 7px;
+      }
+}
+
 .app__whitebg {
     background-color: var(--white-color);
 }
