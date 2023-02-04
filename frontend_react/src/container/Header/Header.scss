@@ -1,6 +1,7 @@
 #home {
     position: relative;
-    background: url('../../assets/bgIMGNight.png');
+    /* background: url('../../assets/bgIMGNight.png'); */ //NIGHT MODE
+    background: url('../../assets/bgIMG.png'); 
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -108,9 +109,9 @@
         border-radius: 50%;
 
 
-        background: #FDE8C2;
+        /* background: #FDE8C2; */ //NIGHT MODE
 
-        /* background: var(--white-color); */
+        background: var(--white-color);
         box-shadow: 0 0 10px rgba(230, 230, 193,0.5);
 
         img {
