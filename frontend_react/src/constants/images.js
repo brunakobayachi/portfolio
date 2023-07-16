@@ -38,6 +38,8 @@ import spotify from '../assets/spotify.png';
 import brazil from '../assets/brazil.png'
 import usa from '../assets/usa.png'
 
+import vueLogo from '../assets/vueLogo.svg'
+import reactLogo from '../assets/reactLogo.svg'
 export default {
   email,
   mobile,
@@ -73,5 +75,7 @@ export default {
   skype,
   spotify,
   brazil,
-  usa
+  usa,
+  vueLogo,
+  reactLogo
 };

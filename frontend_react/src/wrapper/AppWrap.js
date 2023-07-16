@@ -9,7 +9,7 @@ const AppWrap = (Component, idName, classNames) =>
         const currentDate = format(new Date(), 'yyyy');
         return (
             <div id={idName} className={`app__container ${classNames}`}>
-                <SocialMedia />
+                {/* <SocialMedia /> */}
                 <div className="app__wrapper app__flex">
                     <Component />
 
@@ -18,7 +18,7 @@ const AppWrap = (Component, idName, classNames) =>
                         <p className="p-text">{t("copyright")}</p>
                     </div>
                 </div>
-                <NavigationDots active={idName} />
+                {/* <NavigationDots active={idName} /> */}
             </div>
         );
     };

@@ -1,43 +1,42 @@
-import React, { useState } from "react";
+import React from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { client } from "../../client";
 import "./Footer.scss";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
     const { t } = useTranslation();
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
+    // const [formData, setFormData] = useState({
+    //     name: "",
+    //     email: "",
+    //     message: "",
+    // });
+    // const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    // const [loading, setLoading] = useState(false);
 
-    const { name, email, message } = formData;
+    // const { name, email, message } = formData;
 
-    const handleChangeInput = e => {
-        const { name, value } = e.target;
+    // const handleChangeInput = e => {
+    //     const { name, value } = e.target;
 
-        setFormData({ ...formData, [name]: value });
-    };
+    //     setFormData({ ...formData, [name]: value });
+    // };
 
-    const handleSubmit = () => {
-        setLoading(true);
+    // const handleSubmit = () => {
+    //     setLoading(true);
 
-        const contact = {
-            _type: "contact",
-            name: name,
-            email: email,
-            message: message,
-        };
+    //     const contact = {
+    //         _type: "contact",
+    //         name: name,
+    //         email: email,
+    //         message: message,
+    //     };
 
-        client.create(contact).then(res => {
-            setLoading(false);
-            setIsFormSubmitted(true);
-        });
-    };
+    //     client.create(contact).then(res => {
+    //         setLoading(false);
+    //         setIsFormSubmitted(true);
+    //     });
+    // };
 
     return (
         <>
@@ -54,13 +53,13 @@ const Footer = () => {
                 </div>
                 <div className="app__footer-card">
                     <img src={images.mobile} alt="mobile" />
-                    <a href="https://wa.me/5567981657244" className="p-text">
+                    <a href="https://wa.me/5567981657244" className="p-text" target="_blank">
                         +55 (67) 981657244
                     </a>
                 </div>
             </div>
 
-            {!isFormSubmitted ? (
+            {/* {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
                         <input
@@ -104,7 +103,7 @@ const Footer = () => {
                         {t("thanks")}
                     </h3>
                 </div>
-            )}
+            )} */}
         </>
     );
 };
